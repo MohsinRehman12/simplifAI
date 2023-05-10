@@ -6,6 +6,16 @@
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
 
+.navigationBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+  width: 100%;
+
+}
+
 .main {
   width: 100vw;
   min-height: 100vh;
