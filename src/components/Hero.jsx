@@ -24,8 +24,7 @@ const Hero = () => {
         </h1>
 
         <h2 className="desc">
-            SimplifAI is a tool that uses OpenAI's GPT-4 model to summarize articles and make them easier to read. 
-            Hello Mohsin.
+            SimplifAI is a tool that uses OpenAI's GPT-4 model to summarize articles and make them easier to read.
         </h2>
     </header>
   )
