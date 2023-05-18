@@ -9,7 +9,7 @@ const Demo = () => {
 
   const [getSummary, {error, isFetching}] = useLazyGetSummaryQuery();
   const [allArticles, setAllArticles] = useState([]);
-  
+  const [copied, setCopied] = useState("");
   useEffect(() => {
     const savedArticles = JSON.parse(localStorage.getItem('articles'));
     if (savedArticles) {
@@ -29,6 +29,13 @@ const Demo = () => {
       localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
     }
 
+  }
+
+  const handleCopy = (copyUrl) => {
+    setCopied(copyUrl);
+    navigator.clipboard.writeText(copyUrl);
+    setTimeout(() =>
+      setCopied(false), 3000);
   }
   return (
     <section className="mt-16 w-full max-w-xl">
@@ -70,9 +77,11 @@ const Demo = () => {
                 className='link_card'
                 >
 
-                  <div className="copy_btn">
+                  <div className="copy_btn" 
+                  onClick={() => handleCopy(article.url)}
+                  >
                     <img 
-                    src={copy}
+                    src={copied === article.url ? tick : copy}
                     alt='copy_icon'
                     className='w-[40%] h-[40%] object-contain'
                     />
