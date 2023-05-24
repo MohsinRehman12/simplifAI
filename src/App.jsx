@@ -23,7 +23,6 @@ function App() {
     setTheme(theme === 'day' ? 'night' : 'day');
     localStorage.setItem('theme', theme === 'day' ? 'night' : 'day');
 
-    console.log(theme);
   };
 
   useEffect(() => {
