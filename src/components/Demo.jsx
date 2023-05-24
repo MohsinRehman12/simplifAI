@@ -113,14 +113,14 @@ const Demo = () => {
 
       <div className="my-10 max-w-full flex justify-center items-center">
         {isFetching ? (
-          <img src={theme ? loader : loader_night} alt="loader" className="w-20 h-20 object-contain" />
+          <img src={theme==='day' ? loader : loader_night} alt="loader" className="w-20 h-20 object-contain" />
         ) : error ? (
 
-          <p className="font-inter font-bold text-black text-center">
+          <p className= {theme=='day' ? "font-inter font-bold text-black text-center" : "font-inter font-bold text-white text-center"}>
             Error has occured, We Apologize for the issue
             <br />
             
-            <span className="font-satoshi font-normal text-gray-700">
+            <span className={theme=='day' ? "font-satoshi font-normal text-gray-700" : "font-satoshi font-normal text-gray-400" }>
               {error?.data?.error}
             </span>
 
