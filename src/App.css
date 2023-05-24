@@ -147,8 +147,8 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   z-index: 999;
 
@@ -159,6 +159,16 @@
     padding: 0;
   }
 }
+
+@media screen and (min-width: 1280px) {
+
+  .theme_btn{
+    right: calc(50% - 640px);
+  }
+  
+}
+
+
 
 /* Tailwind Styles */
 
